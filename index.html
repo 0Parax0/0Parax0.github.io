@@ -11,24 +11,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    /* Application of the Provided Color Palette */
+    /* Palette 02 Implementation */
     :root {
-      /* Backgrounds (Darkest to light) */
-      --bg-color: #321325;           /* Very Dark Plum */
-      --card-bg: #5F0F40;            /* Dark Magenta */
-      --card-hover: #721650;         /* Slightly brighter variant of Magenta for hover */
+      /* Backgrounds */
+      --bg-color: #D0FFCE;           /* Light Mint Green */
+      --card-bg: #CBEFB6;            /* Soft Pale Green */
+      --card-hover: #b8e6a0;         /* Slightly darker mint tone for hover state */
       
-      /* Primary Accent (Main gradient/highlights) */
-      --accent-gradient: linear-gradient(135deg, #CB793A 0%, #FCDC4D 100%); /* Orange-Gold */
-      --accent-color: #FCDC4D;       /* Gold/Yellow for details */
+      /* Text Colors */
+      --text-main: #34283c;          /* Deep Purple/Slate for crisp text contrast */
+      --text-muted: #827191;         /* Muted Purple from palette */
       
-      /* Tertiary Accent (Borders and subtle text) */
-      --accent-muted: #9A031E;        /* Deep Red */
-      --border-color: #9A031E;       /* For borders */
-      
-      /* Main Text (Using the palette's lightest colors as background and introducing white/muted white) */
-      --text-main: #FFFFFF;          /* Pure white for maximum contrast on dark bg */
-      --text-muted: #FCDC4D;         /* Use the gold as a muted secondary text for contrast */
+      /* Highlights & Accents */
+      --accent-gradient: linear-gradient(135deg, #9A031E 0%, #84ACCE 100%); /* Crimson to Soft Blue */
+      --accent-color: #9A031E;       /* Vibrant Crimson Red */
+      --accent-secondary: #84ACCE;   /* Soft Blue */
+      --border-color: #84ACCE;       /* Soft Blue border */
     }
 
     * {
@@ -99,7 +97,7 @@
     /* Projects Grid */
     .project-card {
       background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
+      border: 2px solid var(--border-color);
       border-radius: 12px;
       padding: 20px 24px;
       display: flex;
@@ -136,7 +134,7 @@
     /* Contact Section */
     .contact-box {
       background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
+      border: 2px solid var(--border-color);
       border-radius: 12px;
       padding: 20px 24px;
       display: flex;
@@ -146,7 +144,7 @@
 
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      background: rgba(154, 3, 30, 0.3); /* Using Deep Red with transparency for subtle contrast */
+      background: rgba(130, 113, 145, 0.15); /* Translucent muted purple */
       color: var(--accent-color);
       padding: 8px 12px;
       border-radius: 8px;
@@ -155,6 +153,7 @@
       word-break: break-all;
       display: inline-block;
       margin-top: 4px;
+      font-weight: 600;
     }
 
     /* Responsive adjustment */
