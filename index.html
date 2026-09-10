@@ -16,7 +16,7 @@
       /* Fallback Background */
       --bg-color-fallback: #584B53;  
       
-      /* Container Cards (Slightly translucent for modern glassmorphism look) */
+      /* Container Cards */
       --card-bg: rgba(71, 60, 67, 0.85);            
       --card-hover: rgba(61, 51, 57, 0.95);         
       
@@ -38,11 +38,15 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      /* WebP Image Background with dark overlay gradient for readability */
-      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                  url('CopperEmissivePLA.webp') no-repeat center center fixed;
-      background-size: cover;
+      
+      /* Background setup broken down to prevent browser shorthand parsing issues */
       background-color: var(--bg-color-fallback);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('./CopperEmissivePLA.webp');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+
       color: var(--text-main);
       line-height: 1.6;
       display: flex;
@@ -105,7 +109,8 @@
     /* Projects Grid */
     .project-card {
       background-color: var(--card-bg);
-      backdrop-filter: blur(8px); /* Subtle glass effect */
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 20px 24px;
@@ -145,6 +150,7 @@
     .contact-box {
       background-color: var(--card-bg);
       backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 20px 24px;
@@ -156,7 +162,7 @@
 
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      background: rgba(157, 92, 99, 0.35); /* Translucent dusty rose */
+      background: rgba(157, 92, 99, 0.35);
       color: var(--text-main);
       padding: 8px 12px;
       border-radius: 8px;
