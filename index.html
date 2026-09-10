@@ -11,22 +11,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    /* Palette 02 Implementation */
+    /* Palette 03 Implementation */
     :root {
       /* Backgrounds */
-      --bg-color: #D0FFCE;           /* Light Mint Green */
-      --card-bg: #CBEFB6;            /* Soft Pale Green */
-      --card-hover: #b8e6a0;         /* Slightly darker mint tone for hover state */
+      --bg-color: #584B53;           /* Dark Charcoal / Warm Gray */
+      --card-bg: #473c43;            /* Darker tone for card containers */
+      --card-hover: #3d3339;         /* Slightly deeper shade on hover */
       
       /* Text Colors */
-      --text-main: #34283c;          /* Deep Purple/Slate for crisp text contrast */
-      --text-muted: #827191;         /* Muted Purple from palette */
+      --text-main: #D6E3F8;          /* Light Ice Blue for high contrast primary text */
+      --text-muted: #c1ccd9;         /* Softened Ice Blue for secondary text */
       
       /* Highlights & Accents */
-      --accent-gradient: linear-gradient(135deg, #9A031E 0%, #84ACCE 100%); /* Crimson to Soft Blue */
-      --accent-color: #9A031E;       /* Vibrant Crimson Red */
-      --accent-secondary: #84ACCE;   /* Soft Blue */
-      --border-color: #84ACCE;       /* Soft Blue border */
+      --accent-gradient: linear-gradient(135deg, #9D5C63 0%, #D6E3F8 100%); /* Dusty Rose to Ice Blue */
+      --accent-color: #9D5C63;       /* Dusty Rose for primary accents */
+      --border-color: #9D5C63;       /* Dusty Rose for borders */
     }
 
     * {
@@ -97,7 +96,7 @@
     /* Projects Grid */
     .project-card {
       background-color: var(--card-bg);
-      border: 2px solid var(--border-color);
+      border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 20px 24px;
       display: flex;
@@ -111,7 +110,7 @@
     .project-card:hover {
       background-color: var(--card-hover);
       transform: translateY(-2px);
-      border-color: var(--accent-color);
+      border-color: #D6E3F8;
     }
 
     .project-info h3 {
@@ -127,14 +126,14 @@
 
     .project-link-icon {
       font-weight: bold;
-      color: var(--accent-color);
+      color: var(--text-main);
       font-size: 1.2rem;
     }
 
     /* Contact Section */
     .contact-box {
       background-color: var(--card-bg);
-      border: 2px solid var(--border-color);
+      border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 20px 24px;
       display: flex;
@@ -144,8 +143,8 @@
 
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      background: rgba(130, 113, 145, 0.15); /* Translucent muted purple */
-      color: var(--accent-color);
+      background: rgba(157, 92, 99, 0.25); /* Translucent dusty rose */
+      color: var(--text-main);
       padding: 8px 12px;
       border-radius: 8px;
       border: 1px solid var(--border-color);
@@ -153,7 +152,6 @@
       word-break: break-all;
       display: inline-block;
       margin-top: 4px;
-      font-weight: 600;
     }
 
     /* Responsive adjustment */
