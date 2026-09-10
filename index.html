@@ -11,21 +11,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    /* Palette 03 Implementation */
+    /* Palette 03 & Background Configuration */
     :root {
-      /* Backgrounds */
-      --bg-color: #584B53;           /* Dark Charcoal / Warm Gray */
-      --card-bg: #473c43;            /* Darker tone for card containers */
-      --card-hover: #3d3339;         /* Slightly deeper shade on hover */
+      /* Fallback Background */
+      --bg-color-fallback: #584B53;  
+      
+      /* Container Cards (Slightly translucent for modern glassmorphism look) */
+      --card-bg: rgba(71, 60, 67, 0.85);            
+      --card-hover: rgba(61, 51, 57, 0.95);         
       
       /* Text Colors */
-      --text-main: #D6E3F8;          /* Light Ice Blue for high contrast primary text */
-      --text-muted: #c1ccd9;         /* Softened Ice Blue for secondary text */
+      --text-main: #D6E3F8;          /* Light Ice Blue */
+      --text-muted: #c1ccd9;         /* Softened Ice Blue */
       
       /* Highlights & Accents */
-      --accent-gradient: linear-gradient(135deg, #9D5C63 0%, #D6E3F8 100%); /* Dusty Rose to Ice Blue */
-      --accent-color: #9D5C63;       /* Dusty Rose for primary accents */
-      --border-color: #9D5C63;       /* Dusty Rose for borders */
+      --accent-gradient: linear-gradient(135deg, #9D5C63 0%, #D6E3F8 100%);
+      --accent-color: #9D5C63;       /* Dusty Rose */
+      --border-color: #9D5C63;       /* Dusty Rose */
     }
 
     * {
@@ -36,7 +38,11 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background-color: var(--bg-color);
+      /* WebP Image Background with dark overlay gradient for readability */
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  url('CopperEmissivePLA.webp') no-repeat center center fixed;
+      background-size: cover;
+      background-color: var(--bg-color-fallback);
       color: var(--text-main);
       line-height: 1.6;
       display: flex;
@@ -60,6 +66,7 @@
       font-weight: 800;
       letter-spacing: -0.025em;
       margin-bottom: 12px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     h1 em {
@@ -72,6 +79,7 @@
     .subtitle {
       font-size: 1.125rem;
       color: var(--text-muted);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
     }
 
     .subtitle strong {
@@ -91,11 +99,13 @@
       color: var(--text-muted);
       margin-bottom: 16px;
       font-weight: 600;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     /* Projects Grid */
     .project-card {
       background-color: var(--card-bg);
+      backdrop-filter: blur(8px); /* Subtle glass effect */
       border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 20px 24px;
@@ -105,6 +115,7 @@
       text-decoration: none;
       color: var(--text-main);
       transition: all 0.2s ease-in-out;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     .project-card:hover {
@@ -133,17 +144,19 @@
     /* Contact Section */
     .contact-box {
       background-color: var(--card-bg);
+      backdrop-filter: blur(8px);
       border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 20px 24px;
       display: flex;
       flex-direction: column;
       gap: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      background: rgba(157, 92, 99, 0.25); /* Translucent dusty rose */
+      background: rgba(157, 92, 99, 0.35); /* Translucent dusty rose */
       color: var(--text-main);
       padding: 8px 12px;
       border-radius: 8px;
