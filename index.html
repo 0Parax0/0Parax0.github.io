@@ -11,15 +11,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
+    /* Application of the Provided Color Palette */
     :root {
-      --bg-color: #0f172a;
-      --card-bg: #1e293b;
-      --card-hover: #334155;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-      --accent-color: #38bdf8;
-      --border-color: #334155;
+      /* Backgrounds (Darkest to light) */
+      --bg-color: #321325;           /* Very Dark Plum */
+      --card-bg: #5F0F40;            /* Dark Magenta */
+      --card-hover: #721650;         /* Slightly brighter variant of Magenta for hover */
+      
+      /* Primary Accent (Main gradient/highlights) */
+      --accent-gradient: linear-gradient(135deg, #CB793A 0%, #FCDC4D 100%); /* Orange-Gold */
+      --accent-color: #FCDC4D;       /* Gold/Yellow for details */
+      
+      /* Tertiary Accent (Borders and subtle text) */
+      --accent-muted: #9A031E;        /* Deep Red */
+      --border-color: #9A031E;       /* For borders */
+      
+      /* Main Text (Using the palette's lightest colors as background and introducing white/muted white) */
+      --text-main: #FFFFFF;          /* Pure white for maximum contrast on dark bg */
+      --text-muted: #FCDC4D;         /* Use the gold as a muted secondary text for contrast */
     }
 
     * {
@@ -137,7 +146,7 @@
 
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      background: #090d16;
+      background: rgba(154, 3, 30, 0.3); /* Using Deep Red with transparency for subtle contrast */
       color: var(--accent-color);
       padding: 8px 12px;
       border-radius: 8px;
